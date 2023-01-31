@@ -4,7 +4,8 @@ int main() {
     int a = 10;
     int condition;
 
-    for (int b = 0; b != 20; b++) {
+    int b;
+    for (b = 0; b != 20; b++) {
         condition = a == b;
         printf("a = %d\n", a);
         printf("b = %d\n", b);
@@ -30,9 +31,9 @@ int main() {
         printf("\n");
     }
 
-    // this value is pretty interesting : 4294967338 ^^'
     int c;
     printf("Entrez la valeur de c: ");
+    // this value is pretty interesting : 4294967338 ^^'
     scanf("%d", &c);
     printf("c = %d\n", c);
     switch (c) {
