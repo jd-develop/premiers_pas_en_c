@@ -20,18 +20,15 @@ typedef struct {
 
 
 void afficherLivre(Livre livre) {
-    printf("=========\n");
     printf("%s\n", livre.titre);
     printf("Écrit par %s\n", livre.auteur);
     printf("Publié en %d\n", livre.annee);
-    printf("=========\n");
 }
 
 
 int main() {
     Livre livre1;
     Livre livre2;
-    int i;
 
     livre1.annee = 1997;
     // livre1.titre = "Le petit cheval de manège";
@@ -44,12 +41,15 @@ int main() {
     strcpy(livre2.auteur, "Daniel Pennac");
 
     afficherLivre(livre1);
+    printf("\n");
     afficherLivre(livre2);
+    printf("\n");
 
     /////////////////////////////////////////////////
 
     Livre bibliotheque[100];
     int nbLivres = 0;
+    int i;
 
     bibliotheque[0].annee = 1943;
     strcpy(bibliotheque[0].titre, "Le petit prince");
@@ -61,9 +61,12 @@ int main() {
     strcpy(bibliotheque[1].auteur, "JK Rowling");
     nbLivres++;
 
-    printf("\nIl y a %d livres dans la bibliothèque :\n", nbLivres);
-    for (i = 0; i < nbLivres; i++)
+    printf("Il y a %d livres dans la bibliothèque :\n\n", nbLivres);
+    for (i = 0; i < nbLivres; i++) {
         afficherLivre(bibliotheque[i]);
+        if (i+1 != nbLivres)
+            printf("\n");
+    }
 
     return 0;
 }

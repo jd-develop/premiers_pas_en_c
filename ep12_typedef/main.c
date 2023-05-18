@@ -23,5 +23,8 @@ int main() {
     if (True)
         printf("True est vrai\n");
 
+    enum {e, f, g, h};
+    printf("%d, %d, %d, %d\n", e, f, g, h);
+
     return 0;
 }
