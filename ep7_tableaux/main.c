@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 
-void printTab(int len, int tab[len], int backlineAtTheEnd) {
+void printTab(int *tab, int len, int backlineAtTheEnd) {
     // print a tab
     int i;
 
@@ -24,7 +24,7 @@ void print2dTab(int len1, int len2, int tab[len1][len2]) {
     for (i=0; i<len1; i++) {
         if (i != 0)
             printf(" ");
-        printTab(len2, tab[i], 0);
+        printTab(tab[i], len2, 0);
 
         if (i != len1-1)
             printf(",\n");
@@ -48,7 +48,7 @@ int main() {
     printf("%d\n", tab[1]);
     printf("%d\n\n", tab[2]);
 
-    printTab(3, tab, 1);
+    printTab(tab, 3, 1);
 
     printf("\n");
 
