@@ -26,7 +26,7 @@ fn main() {
     io::stdin()
         .read_line(&mut n_str)
         .expect("Please enter a positive integer");
-    
+
     let n: u32 = n_str
         .trim().parse()
         .expect("Please enter a positive integer");
